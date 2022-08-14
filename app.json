@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/auth/index",
+    "pages/my/index/index",
+    "pages/my/info/index",
+    "pages/my/edit/index",
+    "pages/hospital/hospital-list/index",
+    "pages/hospital/hospital-detail/index",
+    "pages/hospital/doctor-detail/index",
+    "pages/hospital/doctor-list/index",
+    "pages/hospital/appoint/index",
+    "pages/hospital/appoint-list/index",
+    "pages/hospital/pay/index",
+    "pages/hospital/payment/index",
+    "pages/hospital/case/index",
+    "pages/search/search",
+    "pages/hospital/dept/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "医院挂号预约",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "box-shadow": "0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/nav/home-off.png",
+        "selectedIconPath": "/images/nav/home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/hospital/dept/index",
+        "iconPath": "/images/nav/dept-off.png",
+        "selectedIconPath": "/images/nav/dept-on.png",
+        "text": "科室"
+      },
+      {
+        "pagePath": "pages/my/index/index",
+        "iconPath": "/images/nav/personal-off.png",
+        "selectedIconPath": "/images/nav/personal-on.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

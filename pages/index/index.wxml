@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}"
+          bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+
+  <!-- <view class="search-box row-box {{searchClass}}">
+    <input placeholder="按专家名字搜索" placeholderClass="search-placeholder" bindtap="searchFocus" bindblur="searchBlur" confirm-type="search" bindinput="searchKey"></input>
+    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+  </view> -->
+
+  <view class="swiper-container">
+    <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="{{indicatordots}}" indicator-dots>
+      <block wx:for="{{bannerList}}" wx:key="index">
+        <swiper-item class="swiper-item">
+          <image bindtap="tapBanner" data-id="{{item.link}}" src="{{item.picUrl}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="goods-container">
+    <view class='title'>医院列表</view>
+    <view class="weui-grids">
+      <block wx:for="{{hospitalList}}" wx:key="index">
+        <navigator url="../hospital/hospital-detail/index?id={{item.id}}" class="weui-flex goods">
+          <image src="{{item.picUrl}}" />
+          <view class="content">
+            <view class="goods-name">{{item.hospitalName}}</view>
+            <view class="item">{{item.mobile}}</view>
+            <view class="item">{{item.address}}</view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+
+  <!-- <view class="goods-container">
+    <view class='title'>医生列表</view>
+    <view class="weui-grids">
+      <block wx:for="{{doctorList}}" wx:key="index">
+        <navigator url="../hospital/doctor-detail/index?id={{item.id}}" class="weui-flex goods">
+          <image src="{{item.picUrl}}" />
+          <view class="content">
+            <view class="goods-name">{{item.realName}}</view>
+            <view class="item">{{item.mobile}}</view>
+            <view class="item">{{item.address}}</view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view> -->
+</view>

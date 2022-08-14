@@ -1,0 +1,76 @@
+/* pages/appoint/index.wxss */
+textarea{
+  padding: 20rpx 20rpx 20rpx 0;
+}
+
+
+.flex-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.stock {
+  font-size: 30rpx;
+  color: #ef8203;
+}
+
+.info {
+  width: 540rpx;
+}
+
+.category {
+  background: #fff;
+  border-bottom: 1rpx solid #eee;
+}
+
+.goods-item{
+  padding: 20rpx;
+  align-items: center
+}
+
+.goods-box .img-box {
+  width: 250rpx;
+  height: 180rpx;
+  overflow: hidden;
+}
+
+image {
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+}
+
+.goods-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 36rpx;
+  margin-bottom: 6rpx;
+  font-weight: bold
+}
+
+.goods-price {
+  width: 199rpx;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #e64340;
+}
+
+.goods-title-en {
+  font-size: 32rpx;
+  color: #888;
+}
+
+.author {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.describe {
+  font-size: 24rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

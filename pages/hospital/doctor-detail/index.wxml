@@ -1,0 +1,30 @@
+<!--pages/train/index.wxml-->
+<view class="container">
+  <view class="weui-flex train">
+    <image class="avatar" src="{{train.picUrl}}"></image>
+    <view>
+      <view class="name">{{train.realName}}</view>
+      <view class="remark">{{train.mobile}}</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="title">擅长</view>
+    <view class="remark">
+      {{train.specialty}}
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="title">医生详情</view>
+    <view class="remark">
+      {{train.remark}}
+    </view>
+  </view>
+
+  <view class="footer-box">
+    <view class="now-buy" bindtap="tapBuy" data-id='{{train.id}}'>预约挂号</view>
+  </view>
+
+
+</view>

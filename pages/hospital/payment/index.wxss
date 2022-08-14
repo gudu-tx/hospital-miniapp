@@ -1,0 +1,13 @@
+/* pages/order/order-pay/index.wxss */
+page{
+  height: 100%
+}
+
+image{
+  width: 500rpx;
+  margin: 0 auto;
+}
+
+.amount{
+  color: #e64340;
+}

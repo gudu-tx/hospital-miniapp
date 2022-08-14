@@ -1,0 +1,19 @@
+/* pages/order/order-pay/index.wxss */
+page{
+  height: 100%
+}
+
+image{
+  width: 500rpx;
+  margin: 0 auto;
+}
+
+.no-data-img{
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
+}
+
+.amount{
+  color: #e64340;
+}

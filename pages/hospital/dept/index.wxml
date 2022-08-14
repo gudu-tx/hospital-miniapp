@@ -1,0 +1,14 @@
+<!--pages/order/order-pay/index.wxml-->
+<view class="container">
+  <view class="weui-cells weui-cells_after-title" wx:if="{{deptList.length !== 0}}">
+    <view class="weui-cell" wx:for="{{deptList}}" data-id="{{item.id}}" bindtap="toDetail">
+
+      <icon class="iconfont icon-{{item.icon}}"></icon>
+      <view class="weui-flex__item">{{item.deptName}}</view>
+    </view>
+  </view>
+
+  <view wx:else>
+    <image class="no-data-img" src='../../../images/no-data.png' mode='widthFix'></image>
+  </view>
+</view>

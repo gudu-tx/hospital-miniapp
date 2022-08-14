@@ -1,0 +1,39 @@
+<!--pages/hospital/hospital-detail/index.wxml-->
+<view class="container">
+  <view class="swiper-container">
+    <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <swiper-item>
+          <image src="{{hospital.picUrl}}" class="slide-image" />
+        </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="hospital-info">
+    <view class="hospital-name">{{hospital.hospitalName}}</view>
+    <view class="item">{{hospital.mobile}}</view>
+  </view>
+
+  <view class="hospital-info">
+    <view class='title'>医生列表</view>
+    <view class="content">
+      <view class="train-item" wx:for="{{doctorList}}" bindtap="userDetail" data-id="{{item.id}}">
+        <image class="" src="{{item.picUrl}}"></image>
+        <view class="name">{{item.realName}}</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="hospital-info">
+    <view class='title'>医院详情</view>
+    <text>{{hospital.remark}}</text>
+  </view>
+
+  <!-- <view class="footer-box">
+    <view class="now-buy" bindtap="tapBuy" data-id='{{hospital.id}}'>预约挂号</view>
+  </view> -->
+
+
+
+  
+</view>

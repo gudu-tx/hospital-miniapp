@@ -1,0 +1,91 @@
+<!--pages/appoint/index.wxml-->
+<view class='container'>
+  <view class="weui-flex goods-item">
+    <image src="{{project.picUrl}}" class="image" mode='scaleToFill' />
+    <view class="info">
+      <view class="flex-line">
+        <view class="goods-title">{{project.realName}}</view>
+      </view>
+      <view class="author">
+        {{project.address}}
+      </view>
+      <view class="describe" hidden="true">
+        {{project.remark}}
+      </view>
+    </view>
+  </view>
+  <form bindsubmit='saveAppoint'>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input" hidden="true">
+        <view class="weui-cell__hd">
+          <view class="weui-label">选择医生</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker range="{{userList}}" range-key="realName" bindchange="bindUserChange">
+            <view class="weui-input">{{userList[userIndex].realName}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">选择日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" bindchange="changeDate">
+            <view class="weui-input">{{date}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">选择时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="time" bindchange="changeTime">
+            <view class="weui-input">{{time}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input" hidden="true">
+        <view class="weui-cell__hd">
+          <view class="weui-label">联系人</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="realName" class="weui-input" type="digit" placeholder="请输入联系人" />
+        </view>
+      </view>
+      <view class="weui-cell" hidden="true">
+        <view class="weui-cell__hd">
+          <view class="weui-label">性别</view>
+        </view>
+        <view class="weui-cell__bd">
+          <radio-group bindchange="genderChange">
+            <radio value="1" checked="{{gender == 1}}" />男
+            <radio value="0" checked="{{gender == 0}}" />女
+          </radio-group>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input" hidden="true">
+        <view class="weui-cell__hd">
+          <view class="weui-label">联系电话</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="mobile" class="weui-input" placeholder="请输入联系电话" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input" hidden="true">
+        <view class="weui-cell__hd">
+          <view class="weui-label">备注</view>
+        </view>
+        <view class="weui-cell__bd">
+          <textarea name="remark" class="weui-textarea" placeholder="请输入备注" style="height: 4.3em" />
+        </view>
+      </view>
+    </view>
+    <view class="weui-btn-area" style="text-align: center">
+      <button class="weui-btn" type="primary" form-type='submit'>确定预约</button>
+    </view>
+  </form>
+</view>

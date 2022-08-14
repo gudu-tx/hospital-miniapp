@@ -1,0 +1,14 @@
+<!--pages/hospital/doctor-list/index.wxml-->
+<view class="container" wx:if="{{doctorList.length > 0}}">
+  <view  class="weui-flex list-item" wx:for="{{doctorList}}" data-id="{{item.id}}" bindtap="detail">
+    <image class="logo" src="{{item.picUrl}}"></image>
+    <view>
+      <view class="title">{{item.realName}}</view>
+      <view class="content">{{item.mobile}}</view>
+    </view>
+  </view>
+  
+</view>
+<view wx:else>
+  <image class="no-data-img" src='../../../images/no-data.png' mode='widthFix'></image>
+</view>

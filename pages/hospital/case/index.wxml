@@ -1,0 +1,14 @@
+<!--pages/appointList/index.wxml-->
+<view class='container'>
+  <view class='list' wx:for="{{appointList}}" wx:key="index">
+    <view class='weui-flex item'>
+      <view class='weui-flex__item'>症状：{{item.result}}</view>
+    </view>
+    <view class='weui-flex item'>
+      <view class='weui-flex__item'>建议：{{item.proposal}}</view>
+    </view>
+    <view class='weui-flex item'>
+      <view class='weui-flex__item'>时间：{{item.createTime}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/appointList/index.wxml-->
+<view class='container'>
+  <view class='weui-flex list' wx:for="{{appointList}}" wx:key="index">
+    <view class='weui-flex__item'>
+    <view class='weui-flex item'>
+      <view class='weui-flex__item'>医院：{{item.hospital.hospitalName}}</view>
+    </view>
+    <view class='weui-flex item'>
+      <view class='weui-flex__item'>科室：{{item.dept.deptName}}</view>
+    </view>
+    <view class='weui-flex item'>
+      <view class='weui-flex__item'>医生：{{item.doctor.realName}}</view>
+    </view>
+    <view class='weui-flex item'>
+      <view class='weui-flex__item'>时间：{{item.appointTime}}</view>
+    </view>
+    </view>
+    <view>
+      <button size="mini" type="warn" bindtap="cancel" data-id="{{item.id}}">取消</button>
+    </view>
+  </view>
+</view>

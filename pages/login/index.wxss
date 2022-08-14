@@ -1,0 +1,8 @@
+/* pages/login/login.wxss */
+.container {
+  padding-top: 30rpx;
+}
+
+.weui-btn-area{
+  background-color: rgb(54,163,247);
+}
